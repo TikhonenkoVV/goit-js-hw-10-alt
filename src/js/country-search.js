@@ -17,7 +17,7 @@ const pageReset = () => {
 };
 
 class Api {
-  static #request(url, options) {
+  static request(url, options) {
     return fetch(url, options)
       .then(res => {
         if (!res.ok) {
@@ -30,9 +30,7 @@ class Api {
       });
   }
   static get(url, params) {
-    return Api.#request(
-      url + (params ? `?${new URLSearchParams(params)}` : '')
-    );
+    return Api.request(url + (params ? `?${new URLSearchParams(params)}` : ''));
   }
 }
 
