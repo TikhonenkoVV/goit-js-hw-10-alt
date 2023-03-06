@@ -6,7 +6,7 @@ import {
   startCountryCount,
   countryCount,
   renderCountriesList,
-} from './country-search-pagination.js';
+} from './country-search.js';
 import { calcPageCount } from './page-count.js';
 
 const onDotClick = e => {
